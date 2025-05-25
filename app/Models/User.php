@@ -55,5 +55,9 @@ public function likedArticles()
 {
     return $this->belongsToMany(Article::class, 'article_likes')->withTimestamps();
 }
+public function comments()
+{
+    return $this->hasMany(Comment::class);
+}
 
 }
